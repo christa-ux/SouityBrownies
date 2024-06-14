@@ -1,0 +1,24 @@
+body{
+    font-family: "Archivo Black", sans-serif;
+    font-style: normal;
+    background-color: #F6F1E3;
+  }
+  h4 {
+    font-size: 30px;
+  }
+  .navbar-nav .nav-link {
+    color: #F6F1E3 !important;
+}
+
+.navbar-nav .nav-link.active {
+    color: #F6F1E3 !important;
+}
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+}
+footer {
+    background-color: black !important ;
+    margin-top: auto;
+    padding: 1rem;
+  
+}
