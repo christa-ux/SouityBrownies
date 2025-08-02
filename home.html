@@ -1,60 +1,160 @@
-<!Doctype Html>
+<!DOCTYPE html>
 <html>
-    <head>
-
-<!--Essentials-->
-<meta charset="UTF-8">
-<meta http-equiv="'X-UA-Compatible" content="IE-edge">
-<meta name="viewport" content="width=device-width,initial-scale=1.0">
-
-    <!-- CSS Files-->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-
-<!--font-->
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap" rel="stylesheet">
+    <title>SouityBrownies</title>
+    <style>
+        html, body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            display: flex;
+            flex-direction: column;
+            background-color: #F6F1E3;
+            font-family: "Archivo Black", sans-serif;
+        }
+       #navbar-container {
+    flex-shrink: 0;
+    min-height: 60px; /* Adjust to your actual navbar height */
+}
 
+main {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 0;
+    flex-direction: column;
+    overflow: auto;
+}
 
-    <title> SouityBrownies</title>
+        .content-wrapper {
+            width: 100%;
+        }
+        .logo-img {
+            max-height: 65vh;
+            /* width: auto; */
+            max-width: 100%;
+            object-fit: contain;
+        }
+        footer {
+           flex-shrink: 0;
+    min-height: 50px;
+            background-color: #000000;
+            color: white;
+            padding: 1rem;
+        }
+        @media (max-width: 767px) and (min-width: 357px) {
+    .logo-img {
+        max-height: 35vh;
+        padding-bottom: -30px;
+    }
+    h4 {
+        font-size: 1.3rem;
+        padding-top: -10px;
+    }
+}
 
+@media (max-width: 357px) and (min-width: 200px) {
+   h4 {
+        font-size: 1.1rem;
+        padding-top: -10px;
+    }
+    .logo-img {
+        max-height: 35vh;
+        padding-bottom: -30px;
+    }
+}
 
-    </head>
-    <body>
-        <!--navbar-->
-        <nav id="headerContainer"></nav>
+/* @media (max-width: 399px) {
+    .logo-img {
+        max-height: 20vh;
+    }
+} */
 
-        <!--About section-->
-<div class="container text-center">
-    <div class="row m-4">
-        <div class="col-lg-6 col-md-6 col-sm-12">
-      <img src="logo.png" style="width:100%; display: flex; justify-content:center; align-items: center;">
-        </div>
-        <div class="col-lg-6 col-md-6 col-sm-12 align-self-center" >
-            <h4 style="text-align:center; font-weight:300px;"> Welcome to Souity Brownies, <br>The best brownies in town!</h4>
-        <p style="text-align:center;"> </p>
-        <a href="menu.pdf" download="menu.pdf" class="btn px-3" style="background-color: #FABEEB">
-            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-download" viewBox="0 0 16 16">
-                <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5"/>
-                <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708z"/>
-              </svg> Menu</a>
-            <a href="order.html" class="btn" id="contactInfo" style="background-color: #FABEEB">Order Now!</a>
-        </div>
+       /* @media (max-width: 768px) {
+    .logo-img {
+        max-height: 20vh;
+    }
 
-    </div>
-</div>
+    h4 {
+        font-size: 1rem;
+        line-height: 1.3;
+    } */
 
-<!--Footer-->
-<div id="footerContainer"></div>
+    /* main {
+      
+        min-height: 0;
+        height: calc(100vh - 110px); /
+  
+    } */
+/* 
+    .btn {
+        font-size: 0.9rem;
+        padding: 0.5rem 1rem;
+    }
+} */
 
-
-        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" 
-        integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" 
-        crossorigin="anonymous"></script>
-
-        <script src="index.js"></script>
-       
-    </body>
-</html>
+    </style>
+</head>
+<body>
+    <!--navbar-->
+    <div id="navbar-container"></div>
     
+    <main>
+        <div class="content-wrapper">
+            <div class="container text-center">
+                <div class="row align-items-center">
+                    <div class="col-lg-6 col-md-6 col-sm-12 mb-4 mb-md-0">
+                      <img src="logo.png" class="logo-img d-block mx-auto w-100">
+                    </div>
+                    <div class="col-lg-6 col-md-6 col-sm-12">
+                        <h4 class="text-center mb-4">
+                            Welcome to Souity Brownies, <br>The best brownies in town!
+                        </h4>
+
+                        <div class="d-flex flex-wrap justify-content-center gap-3">
+                            <a href="menu.pdf" download="menu.pdf" class="btn px-4 py-2 d-flex align-items-center justify-content-center gap-2" style="background-color: #FABEEB">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-download" viewBox="0 0 16 16">
+                                    <path d="M.5 9.9a.5.5 0 0 1 .5.5v2.5a1 1 0 0 0 1 1h12a1 1 0 0 0 1-1v-2.5a.5.5 0 0 1 1 0v2.5a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2v-2.5a.5.5 0 0 1 .5-.5"/>
+                                    <path d="M7.646 11.854a.5.5 0 0 0 .708 0l3-3a.5.5 0 0 0-.708-.708L8.5 10.293V1.5a.5.5 0 0 0-1 0v8.793L5.354 8.146a.5.5 0 1 0-.708.708z"/>
+                                </svg>
+                                Menu
+                            </a>
+                            <a href="order.html" class="btn px-4 py-2" style="background-color: #FABEEB">Order Now!</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer class="text-center">
+        &copy; 2025 Souity Brownies
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- Load navbar dynamically -->
+    <script>
+        fetch('navbar.html')
+            .then(response => response.text())
+            .then(html => {
+                document.getElementById('navbar-container').innerHTML = html;
+            })
+            .catch(err => console.error('Failed to load navbar:', err));
+    </script>
+    <script src="index.js"></script>
+</body>
+</html>

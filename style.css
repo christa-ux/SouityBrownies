@@ -1,7 +1,11 @@
 body{
-    font-family: "Archivo Black", sans-serif;
-    font-style: normal;
+   font-family: "Archivo Black", sans-serif;
     background-color: #F6F1E3;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; 
   }
   h4 {
     font-size: 30px;
@@ -17,8 +21,15 @@ body{
     background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 255, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
 }
 footer {
-    background-color: black !important ;
-    margin-top: auto;
+    background-color: #000000 !important;
+    color: white;
+    flex-shrink: 0; /* Prevents footer from shrinking */
     padding: 1rem;
-  
+}
+main {
+    flex-grow: 1;
+    padding-bottom: 1rem; /* Small padding at bottom */
+}
+#navbar-container {
+    flex-shrink: 0; /* Prevents navbar from shrinking */
 }
